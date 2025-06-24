@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
+
+#startBtn {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #111;
+  border: 2px solid white;
+  font-size: 1.3rem;
+  color: white;
+  cursor: pointer;
+  margin: 100px auto;
+}
+
+.stars span {
+  font-size: 3rem;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s;
+}
+
+.stars .active {
+  color: gold;
+}
+
+#confirmBtn {
+  margin-top: 20px;
+  padding: 10px 30px;
+  font-size: 1rem;
+  background-color: #800020;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#errorMsg {
+  color: #800020;
+  margin-top: 15px;
+  font-weight: bold;
+  display: none;
+}
+
+/* Effet glitch */
+@keyframes glitch {
+  0% { text-shadow: 2px 0 red, -2px 0 blue; }
+  20% { text-shadow: -2px 0 red, 2px 0 blue; }
+  40% { text-shadow: 2px 2px red, -2px -2px blue; }
+  60% { text-shadow: -2px 2px red, 2px -2px blue; }
+  80% { text-shadow: 2px 0 red, -2px 0 blue; }
+  100% { text-shadow: none; }
+}
+
+.scary-effect {
+  animation: glitch 0.5s linear 4;
+}
+
+@keyframes vibration {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(-2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+.vibrate {
+  animation: vibration 0.2s linear 3;
+}
+
+#questionContainer,
+#thankYou {
+  display: none;
+}
